@@ -4,6 +4,7 @@
 }
 body{
     background-image: url(./images/Group\ 1000001644.png) ;
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
