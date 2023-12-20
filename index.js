@@ -25,7 +25,6 @@ for(i = 0; i < starsBox.length; i++){
 }
 
 // Arrow Of Comments
-console.log(tstBox.item(0).previousElementSibling)
 arrowLeft.addEventListener("click",function(){
     tstBox.item(0).classList.add("seen")
     tstBox.item(1).classList.remove("seen")
