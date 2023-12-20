@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     box-sizing: border-box;
@@ -583,9 +582,9 @@ footer div:nth-of-type(2){
 }
 /* _____________________ */
 @media only screen 
- and (max-width:845px){
+ and (max-width:844px){
     nav{
-        justify-content: space-between;
+        justify-content: space-around;
     }
     [alt="bars"]{
         display: block;
@@ -698,19 +697,19 @@ footer div:nth-of-type(2){
    }
     }
 @media only screen 
- and (max-width:376px){
+ and (min-width:414px){
     [alt='Abstract']{
-     width: 9.375rem;
-    height: 6.625rem;
+    width: 5.375rem;
+    height: 3.625rem;
     position: absolute;
-    left: -3.7rem;
-    top: -2.875rem;
+    left: 2.3rem;
+    top: -1.875rem;
     }
     .leftSection{
         display: inline-block;
     }
     .leftSection h3{
-        font: 500 35px 'Poppins';
+        font: 500 26px 'Poppins';
         text-align: center;
     }
     .leftSection p{
@@ -726,6 +725,7 @@ footer div:nth-of-type(2){
     .steps{
         display: flex;
         flex-direction: column;
+        align-items: center;
         height: fit-content;
         margin: 0;
         position: unset;
