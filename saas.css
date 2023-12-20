@@ -35,7 +35,7 @@ nav img{
     margin-left: 10rem;
 }
 .getStart{
-    display: none;
+    display: block;
 }
 [type='button']{
     background-color: #AE68FA;
