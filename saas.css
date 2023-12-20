@@ -1,7 +1,4 @@
-/*
-font-family: 'Inter', sans-serif;
-font-family: 'Poppins', sans-serif; 
-*/
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -24,15 +21,22 @@ a{
 /* NAVIGATION */
 nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: transparent;
     height: auto;   
     margin: 1.25rem 0 ;
+    padding: 0 3rem;
 }
 nav img{
     width: 7.5rem ;
     height: 2.125rem ;
+}
+.navLinks{
+    margin-left: 10rem;
+}
+.getStart{
+    display: none;
 }
 [type='button']{
     background-color: #AE68FA;
@@ -42,7 +46,25 @@ nav img{
     border: 1px solid transparent;
     width: 6.25rem;
     height: 3.125rem;
+    margin-left: 11rem;
 }
+[alt="bars"],[alt="bars-stragged"]{
+    display: none;
+    z-index: 2;
+    width:1.7rem;
+    height: 1.7rem;
+    cursor: pointer;
+}
+.block{
+    display: block !important;
+}
+.none{
+    display: none !important;
+}
+.visible{
+    visibility: visible !important;
+}
+
 /* ARTICLE */
 article{
     display: grid;
@@ -107,7 +129,7 @@ article div p{
     justify-items: center;
     background-color: white;
     border: 1px solid transparent;
-    width: 9.75rem;
+    width: 10.75rem;
     height: 12rem;
     border-radius: 20px;
     box-shadow: 0px 56px 126px #00000038;
@@ -207,6 +229,7 @@ article div p{
 }
 .offerBox{
     display: grid;
+    justify-content: center;
     grid-template-columns:repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
 }
@@ -333,6 +356,7 @@ article div p{
     border: 1px solid #3E4581;
     color: #3E4581;
     font-weight: 400;
+    margin-left: 0;
 }
 .specialBox{
     position: relative;
@@ -346,7 +370,6 @@ article div p{
     margin: 0 1rem;
     z-index: 1;
     box-shadow: 0px 1px 5px #0000000E;
-    border-radius: 10px;
 }
 .specialBox p{
     color: white;
@@ -369,6 +392,7 @@ article div p{
     border: 1px solid white;
     color: white;
     font-weight: 400;
+    margin-left: 0;
 }
 /* COMMMENTS */
 .comments{
@@ -440,7 +464,7 @@ article div p{
 .data{
     display: grid;
     background-color:#f5f5f5 ;
-    height: 39rem;
+    height: fit-content;
     margin: 4rem 8rem;
 }
 .dataAnalysis{
@@ -466,6 +490,7 @@ article div p{
     background-color: #AE68FA;
     color: white;
     text-align: center;
+    margin: 2rem 0;
 }
 .data div:nth-of-type(2){
     display: grid;
@@ -557,4 +582,239 @@ footer div:nth-of-type(2){
     margin: 1rem;
 }
 /* _____________________ */
-
+@media only screen 
+ and (max-width:845px){
+    nav{
+        justify-content: space-between;
+    }
+    [alt="bars"]{
+        display: block;
+    }
+    .navLinks{
+        visibility:hidden;
+        display: grid;
+        justify-items: center;
+        gap: 1rem;
+        width: 100%;
+        position: absolute;
+        right: 0rem;
+        top: 6rem;
+        z-index: 1;
+        background-color: rgb(253, 250, 250);
+    }
+    .navLinks a{
+        font-size:20px ;
+    }
+    .navLinks span{
+        width: 100%;
+    }
+    .navLinks button{
+        margin-left: 0;
+        width: 100%;
+    }
+    .right{
+        display: none;
+    }
+    article{
+        grid-template-columns: 100% 0%;
+    }
+    .leftSection{
+        width: 100%;
+        display: grid;
+        justify-items: center;
+    }
+    .leftSection p{
+        display: flex;
+        justify-content: center;
+        font: 400 18px 'Poppins',sans-serif;
+        text-align: center;
+        width: auto;
+    }
+    .getStart{
+        display: flex;
+        justify-content: center;
+    }
+    .leftSection h3{
+        font: 500 55px 'Poppins',sans-serif;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+    .trustedCompanies{
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        padding: 0 5rem;
+    }
+    .trustedCompanies img:last-child{
+        display: none;
+    }
+    .offer{
+        margin: 5rem 0;
+    }
+    .offerBox{
+    grid-template-columns: 1fr 1fr;
+    }
+    .steps{
+        display: grid;
+        justify-items: center;
+        height: fit-content;
+        margin: 0;
+    }
+    .stepsTitle{
+        text-align: center;
+    }
+    [alt='Intelligence'], 
+    [alt='Marketing']{
+    position: unset;
+    }
+    [alt='External Data']{
+        width: 37.5rem;
+        height: 29.6rem;
+        position: unset;
+        margin-right: 8rem;
+    }
+   .plans{
+    margin: 2rem 0 ;
+    display: grid;
+    justify-content: center;
+   }
+   .planPrices{
+    display: flex;
+    flex-direction: column;
+   }
+   .planBox , .specialBox{
+    width: 30.625rem;
+    margin: 2rem 0;
+   }
+   .comments{
+    margin: 0;
+    display: grid;
+    justify-content: center;
+   }
+   .tstBox{
+    width: 16.75rem;
+    height: 20.5rem;
+   }
+    }
+@media only screen 
+ and (max-width:376px){
+    [alt='Abstract']{
+     width: 9.375rem;
+    height: 6.625rem;
+    position: absolute;
+    left: -3.7rem;
+    top: -2.875rem;
+    }
+    .leftSection{
+        display: inline-block;
+    }
+    .leftSection h3{
+        font: 500 35px 'Poppins';
+        text-align: center;
+    }
+    .leftSection p{
+        font: 400 20px 'Poppins';
+    }
+    .getStart{
+        display: grid;
+        gap: 10px;
+    }
+    .offerBox{
+        grid-template-columns: 1fr;
+    }
+    .steps{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        margin: 0;
+        position: unset;
+    }
+    .stepsTitle{
+        text-align: center;
+    }
+    [alt='Intelligence'],[alt='Marketing']{
+        width: 15rem;
+        height: 19rem;
+        margin: 2rem 3rem;
+        position: unset;
+    }
+    [alt='External Data']{
+        width: 21rem;
+        height: 19rem;
+        margin: 2rem -2rem;
+        position: unset;
+    }
+    .plans{
+        margin: 2rem 0;
+        display: grid;
+        justify-content: center;
+    }
+    .plans h3,.comments h3{
+        font: 500 26px 'Poppins';
+    }
+    .plans p,.comments p{
+        font:400 16px 'Poppins' ;
+    }
+    .plans br{
+        display: none;
+    }
+    .planPrices{
+        display: grid;
+        margin: 1rem 0;
+    }
+    .planBox,.specialBox{
+        width: 20.625rem;
+        height: 31.75rem;
+        margin: 2rem;
+    }
+    .planBox button,.specialBox button{
+        margin-left: 0;
+    }
+    .comments{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tstBox,.tstBox{
+        width: 22.75rem;
+        margin: 1rem;
+    }
+    .data{
+        margin: 0;
+    }
+    .dataAnalysis{
+        display: flex;
+        flex-direction: column;
+    }
+    .data div:nth-of-type(2){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .data button{
+        margin: 1rem 0;
+    }
+    footer{
+        margin: 2rem 0;
+    }
+    footer h3{
+        font: 500 45px 'Poppins';
+    }
+    footer span input{
+        width: 21rem;
+    }
+    footer span button{
+        display: none;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+    .rights h3{
+        font: 600 14px 'Poppins';
+        letter-spacing: 3px;
+    }
+ }
