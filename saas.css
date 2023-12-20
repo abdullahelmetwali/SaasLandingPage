@@ -719,7 +719,9 @@ footer div:nth-of-type(2){
         gap: 10px;
     }
     .offerBox{
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .steps{
         display: flex;
