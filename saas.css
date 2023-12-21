@@ -13,6 +13,12 @@ a{
     letter-spacing: 1px;
     margin: 0 10px;
 }
+ul{
+    display: flex;
+}
+li{
+    list-style: none;
+}
 .intro{
     height: 100vh;
     margin: 10px 0;
@@ -33,6 +39,8 @@ nav img{
     height: 2.125rem ;
 }
 .navLinks{
+    display: flex;
+    align-items: center;
     margin-left: 10rem;
 }
 .getStart{
@@ -586,21 +594,29 @@ footer div:nth-of-type(2){
  and (max-width:845px){
     nav{
         justify-content: space-between;
+        padding: 0;
     }
     [alt="bars"]{
         display: block;
     }
     .navLinks{
         visibility:hidden;
-        display: grid;
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 1rem;
         width: 100%;
         position: absolute;
         right: 0rem;
-        top: 6rem;
+        top: 4rem;
         z-index: 1;
         background-color: rgb(253, 250, 250);
+    }
+    .navLinks ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
     }
     .navLinks a{
         font-size:20px ;
