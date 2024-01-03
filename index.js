@@ -44,3 +44,8 @@ arrowRight.addEventListener("click",function(){
         tstBox.item(2).classList.remove("seen")
     }
 })
+
+// Disable Horizontal Scrolling
+window.onscroll = function(){
+    window.screenLeft = 0;
+}
